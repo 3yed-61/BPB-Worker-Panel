@@ -547,7 +547,7 @@ async function parseTrojanHeader(buffer) {
     }
 
     const atype = view.getUint8(1);
-    // 0x01: IPv4 address
+    // 0x01: IP address
     // 0x03: Domain name
     // 0x04: IPv6 address
     let addressLength = 0;
@@ -796,7 +796,7 @@ async function processVlessHeader(vlessBuffer, userID) {
     let addressIndex = portIndex + 2;
     const addressBuffer = new Uint8Array(vlessBuffer.slice(addressIndex, addressIndex + 1));
 
-    // 1--> ipv4  addressLength =4
+    // 1--> ip  addressLength =4
     // 2--> domain name addressLength=addressBuffer[1]
     // 3--> ipv6  addressLength =16
     const addressType = addressBuffer[0];
@@ -1131,7 +1131,7 @@ function generateRemark(index, port, address, cleanIPs, protocol, configType) {
         ? addressType = 'Clean IP'
         : addressType = isDomain(address) ? 'Dom': isIPv4(address) ? 'v4' : isIPv6(address) ? 'v6' : '';
 
-    return `♨️ ${index} - ${protocol}${type} - ${addressType} : ${port}`;
+    return `♨️${index} - ${protocol}${type} - ${addressType} : ${port}`;
 }
 
 function isDomain(address) {
