@@ -1129,7 +1129,7 @@ function generateRemark(index, port, address, cleanIPs, protocol, configType) {
 
     cleanIPs.includes(address)
         ? addressType = 'Clean IP'
-        : addressType = isDomain(address) ? 'Domain': isIPv4(address) ? 'IPv4' : isIPv6(address) ? 'IPv6' : '';
+        : addressType = isDomain(address) ? 'Domain': isIPv4(address) ? 'v4' : isIPv6(address) ? 'v6' : '';
 
     return `♨️ ${index} - ${protocol}${type} - ${addressType} : ${port}`;
 }
