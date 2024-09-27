@@ -3551,7 +3551,7 @@ async function getFragmentConfigs(env, hostName) {
                 let remark;
 
                 if (vlessConfigs && i === 0) {
-                    remark = generateRemark(proxyIndex, port, addr, cleanIPs, '3λΞĐ', 'F');
+                    remark = generateRemark(proxyIndex, port, addr, cleanIPs, '₃λΞĐ', 'F');
                     outbound = buildXrayVLESSOutbound('proxy', addr, port, userID, hostName, proxyIP);
                 }
                 
