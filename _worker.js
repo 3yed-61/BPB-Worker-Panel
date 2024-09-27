@@ -1131,7 +1131,7 @@ function generateRemark(index, port, address, cleanIPs, protocol, configType) {
         ? addressType = 'Clean IP'
         : addressType = isDomain(address) ? 'Domain': isIPv4(address) ? 'ipv4' : isIPv6(address) ? 'ipv6' : '';
 
-    return `${index} - ${protocol}${type} - ${addressType} : ${port} |♨️`;
+    return `${index} - ${protocol}${type} - ${addressType} : ${port} |⚕️`;
 }
 
 function isDomain(address) {
