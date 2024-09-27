@@ -1444,7 +1444,7 @@ async function renderHomePage (env, hostName, fragConfigs) {
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>3λΞĐ Panel ${panelVersion}</title>
+        <title>₃λΞĐPanel ${panelVersion}</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<style>
@@ -1661,7 +1661,7 @@ async function renderHomePage (env, hostName, fragConfigs) {
 	</head>
 	
 	<body>
-		<h1>3λΞĐ Panel <span style="font-size: smaller;">${panelVersion}</span> ♨️</h1>
+		<h1>₃λΞĐPanel <span style="font-size: smaller;">${panelVersion}</span> ♨️</h1>
 		<div class="form-container">
             <form id="configForm">
                 <h2>VLESS/TROJAN SETTINGS ⚙️</h2>
@@ -2738,7 +2738,7 @@ async function renderLoginPage () {
     </head>
     <body>
         <div class="container">
-            <h1>3λΞĐ Panel <span style="font-size: smaller;">${panelVersion}</span> ♨️</h1>
+            <h1>₃λΞĐPanel <span style="font-size: smaller;">${panelVersion}</span> ♨️</h1>
             <div class="form-container">
                 <h2>User Login</h2>
                 <form id="loginForm">
@@ -2809,7 +2809,7 @@ function renderErrorPage (message, error, refer) {
 
     <body>
         <div id="error-container">
-            <h1>3λΞĐ Panel <span style="font-size: smaller;">${panelVersion}</span> ♨️</h1>
+            <h1>₃λΞĐPanel <span style="font-size: smaller;">${panelVersion}</span> ♨️</h1>
             <div id="error-message">
                 <h2>${message} ${refer 
                     ? 'Please try again or refer to <a href="https://github.com/3yed-61/BPB-Worker-Panel/blob/main/README.md">documents</a>' 
@@ -3452,7 +3452,7 @@ async function buildWorkerLessConfig(remoteDNS, localDNS, lengthMin,  lengthMax,
     delete fakeOutbound.streamSettings.sockopt;
     fakeOutbound.streamSettings.wsSettings.path = '/';
     let fragConfig = structuredClone(xrayConfigTemp);
-    fragConfig.remarks  = '♨️3λΞĐ F - WorkerLess ⭐'
+    fragConfig.remarks  = '♨️₃λΞĐF - WorkerLess ⭐'
     fragConfig.dns = await buildXrayDNSObject('https://cloudflare-dns.com/dns-query', localDNS, blockAds, bypassIran, bypassChina, bypassLAN, blockPorn, true);
     fragConfig.outbounds[0].settings.domainStrategy = 'UseIP';
     fragConfig.outbounds[0].settings.fragment.length = `${lengthMin}-${lengthMax}`;
@@ -3551,7 +3551,7 @@ async function getFragmentConfigs(env, hostName) {
                 let remark;
 
                 if (vlessConfigs && i === 0) {
-                    remark = generateRemark(proxyIndex, port, addr, cleanIPs, '3λΞĐ ', 'F');
+                    remark = generateRemark(proxyIndex, port, addr, cleanIPs, '₃λΞĐ', 'F');
                     outbound = buildXrayVLESSOutbound('proxy', addr, port, userID, hostName, proxyIP);
                 }
                 
@@ -3588,7 +3588,7 @@ async function getFragmentConfigs(env, hostName) {
     }
     
     let bestPing = structuredClone(balancerConfig);
-    bestPing.remarks = '♨️3λΞĐ F - Best Ping 💥';
+    bestPing.remarks = '♨️₃λΞĐF - Best Ping 💥';
     bestPing.outbounds = [...outbounds, ...bestPing.outbounds];
     
     if (chainProxy) {
@@ -3598,7 +3598,7 @@ async function getFragmentConfigs(env, hostName) {
     }
 
     let bestFragment = structuredClone(balancerConfig);
-    bestFragment.remarks = '♨️3λΞĐ F - Best Fragment 😎';
+    bestFragment.remarks = '♨️₃λΞĐF - Best Fragment 😎';
     bestFragment.outbounds.splice(0,1);
     bestFragValues.forEach( (fragLength, index) => {
         bestFragment.outbounds.push({
