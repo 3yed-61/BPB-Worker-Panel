@@ -203,7 +203,7 @@ function generateSubUrl(path, app, tag, hiddifyType, singboxType) {
     const url = new URL(window.location.href);
     url.pathname = `/sub/${path}/${globalThis.subPath}`;
     app && url.searchParams.append('app', app);
-    if (tag) url.hash = `💦 ${atob('QlBC')} ${tag}`;
+    if (tag) url.hash = `♨️ ${atob('QlBC')} ${tag}`;
 
     if (singboxType) return `sing-box://import-remote-profile?url=${url.href}`;
     if (hiddifyType) return `hiddify://import/${url.href}`;
